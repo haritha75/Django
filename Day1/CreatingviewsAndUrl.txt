@@ -1,0 +1,41 @@
+views.py
+
+from django.shortcuts import render
+from django.http import HttpResponse
+
+# Create your views here.
+def home(request):
+    return HttpResponse("Welcome to Little Lemon!")
+
+urls.py - App-level
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+        path('', views.home, name="home"),
+] 
+
+urls.py - Project-level
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('myapp.urls')),
+]
+
+settings.py - INSTALLED_APPS
+
+INSTALLED_APPS = [
+    'myapp.apps.MyappConfig', # string added. 
+    # Note: This is effectively the location of MyappConfig class inside the app-level apps.py file
+    # Relative path of the app needs to be added. This means, alternatively you could have also added simply the name of the app which is 'myapp' 
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]

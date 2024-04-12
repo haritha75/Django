@@ -1,0 +1,71 @@
+
+The Django framework allows easy integration with many tools and languages with support from other Python libraries. 
+its ability to provide a robust,secure, adaptable and scalable functionalities. 
+provides features like templates,libraries and APIs,which are all easily manageable and scalable. 
+Django is also a popular choice for eCommerce, health care, finance, transport, travel, social media and much more. 
+Django provides features like APIs which are all easily manageable and scalable.  
+Django provides features like libraries which are all easily manageable and scalable.   
+Django provides features like templates which are all easily manageable and scalable.
+Real-World:
+In the real world, Django is used for various purposes including web development, e-commerce platforms, content management systems, 
+API development, data analysis platforms, social networking sites, booking and reservation systems, and educational platforms. Its versatility, 
+scalability, and extensive ecosystem make it a popular choice across different industries.
+In Django, an app represent a submodule of a project. 
+you use the django-admin utility to perform various administrative tasks. 
+These tasks include creating the project and app, performing  migrations to generate database tables, 
+whose structure matches data models, and running a development server.
+the manage.py script can perform everything that the django-admin utility does.
+
+using manage.py is more straightforward, especially if you are required to work on a single project. 
+If you have multiple projects, use django-adminand specify the settings. 
+
+Django manages the database operations with the ORM technique.
+Migration refers to generating a database table whose structure matches the data model declared in the app. 
+
+In Django, the makemigrations and migrate commands are used to manage database schema changes. 
+n summary, makemigrations generates migration files based on changes to your models, while migrate applies those migration files to the database to make the actual schema changes.
+
+urls.py
+
+This script contains a list of object urlpatterns. Every time the client browser requests a URL, 
+the Django server looks to match its pattern and routes the application to the mapped view. 
+
+asgi.py
+
+This file is used by the application servers following the ASGI standard to serve asynchronous web applications.
+
+wsgi.py
+
+Many web application servers implement the WSGI standard. This script is the entry point for such WSGI-compatible 
+servers to serve your classical web application. 
+
+settings.py
+
+This file defines the attributes that influence the function of a Django application.
+The startproject template assigns some default values to these attributes. They may be modified as per requirement during the use of the application.
+
+INSTALLED_APPS
+
+This is a list of strings. Each string represents the path of an app inside the parent project folder. The startproject template installs some apps by default.
+They appear in the INSTALLED_APPS list. This list must be updated by adding its name whenever a new app is installed. 
+
+STATIC_URL
+
+This setting points to the folder where the static files, such as JavaScript code, CSS files and images, are placed. Usually, it is set to 'static/' corresponding to the folder of this name in the parent project folder.
+
+
+True or false. If you are a Python developer working on multiple projects, it's best practice to keep your projects isolated in a virtual environment.   
+
+The command-line utility that Django uses internally to create a new Django project is called django-admin. 
+
+Manage.py:-  local version of django-admin
+
+django-admin.py and manage.py are both command-line utilities provided by Django for managing Django projects, but they serve different purposes:
+django-admin.py is a standalone script that is installed along with the Django framework.
+manage.py is a script automatically created in each new Django project.
+
+
+In summary, while django-admin.py is used for project-wide administrative tasks and 
+creating new projects, manage.py is used for project-specific management commands within an existing project.
+
+django-admin is installed in the Python environment when you install Django with PIP utility. The manage.py file is created inside each Django project folder.

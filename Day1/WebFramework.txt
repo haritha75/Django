@@ -1,0 +1,36 @@
+fast development
+clean structure
+change and modify
+code reusability
+
+Django uses:-
+
+scalable -flxibility
+secure
+fast
+freature-rich
+code reusability
+
+3-tier architecute
+
+1) presentaion tier
+2) application tier
+3) data tier
+
+a three-tier architecture provides a structured approach to designing and implementing software systems,
+offering numerous benefits in terms of modularity, scalability, flexibility, performance, security, and maintainability.
+
+Presentation Tier (also known as the User Interface or Client Tier):
+
+    This tier represents the user interface of the application, where interaction with the end user occurs.
+    The primary responsibility of this tier is to present information to users and capture user input.
+
+Application Logic Tier (also known as the Business Logic or Middle Tier):
+
+    This tier contains the application logic that processes and manipulates data to implement the business rules and requirements of the application.
+    This tier often includes components such as web servers, application servers, and middleware.
+
+Data Tier (also known as the Data Access or Backend Tier):
+
+    This tier manages the storage and retrieval of data used by the application.
+    The data tier provides services for storing, retrieving, updating, and deleting data, ensuring data integrity and consistency.

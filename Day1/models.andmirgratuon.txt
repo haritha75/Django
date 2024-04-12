@@ -1,0 +1,31 @@
+ models.py - Initial migration
+
+ from django.db import models
+
+# Create your models here.
+class Drinks(models.Model):
+    drink = models.CharField(max_length=200)
+    price = models.IntegerField()
+
+    models.py - Second migration
+
+    from django.db import models
+
+# Create your models here.
+class Drinks(models.Model):
+    drink_name = models.CharField(max_length=200)
+    price = models.IntegerField()
+    
+
+    admin.py
+
+    from django.contrib import admin
+from .models import Drinks
+
+# Register your models here.
+admin.site.register(Drinks)
+
+# Commands to perform migrations
+
+python3 manage.py makemigrations
+python3 manage.py migrate
