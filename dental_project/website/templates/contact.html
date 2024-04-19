@@ -209,7 +209,7 @@
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                  <a href="#"><i class="fa fa-home"></i> Home</a>
+                  <a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
                   Contact
@@ -221,6 +221,13 @@
       </div>
     </div>
     <!-- ***** Breadcrumb Area End ***** -->
+    {% if message_name%}
+    <center>
+      <h3>Thanks {{ message_name}}!</h3>
+      <br />
+      We received your email and will contact you shortly...
+    </center>
+    <br />< {% endif%}
 
     <!-- ***** Contact Area Start ***** -->
     <section class="dento-contact-area mt-50 mb-100">
@@ -229,8 +236,13 @@
           <div class="col-12">
             <div class="google-maps mb-100">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11956.9355465873!2d24.0768412544878!3d56.9550599906977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfb0e5073ded%3A0x400cfcd68f2fe30!2z4Kaw4Ka_4KaX4Ka-LCDgprLgp43gpq_gpr7gpp_gp43gpq3gpr_gpoY!5e0!3m2!1sbn!2sbd!4v1543911160102"
-                allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2637.175335353818!2d-87.63120719981261!3d41.903738635699284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd35029e1fadd%3A0xc86c477323a8bc83!2sState%20%26%20Elm!5e0!3m2!1sen!2sin!4v1713455356049!5m2!1sen!2sin"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>
@@ -241,16 +253,13 @@
           <div class="col-12 col-md-4">
             <div class="contact-information">
               <h5>Address</h5>
-              <p>28 Jackson Street, Chicago, 7788569 USA</p>
+              <p>10 West Ele St., Chicago, 60610 USA</p>
 
               <h5>Phone</h5>
-              <p>+84. 2252. 2250. 122</p>
-
-              <h5>Fax</h5>
-              <p>+84. 2252. 2250. 125</p>
+              <p>+123 123 1234</p>
 
               <h5>Email</h5>
-              <p class="mb-0">info.dento@gmail.com</p>
+              <p class="mb-0">drjohn@gmail.com</p>
             </div>
           </div>
 
@@ -263,7 +272,8 @@
                 <div class="line"></div>
               </div>
               <!-- Form -->
-              <form action="#" method="post">
+              <form action="{% url 'contact' %}" method="post">
+                {% csrf_token %}
                 <div class="row">
                   <div class="col-lg-6">
                     <input
